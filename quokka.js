@@ -5,5 +5,6 @@
 })
 
 import value from './myModule';
+import _xor from 'lodash-es/xor'
 
 console.log(value);
