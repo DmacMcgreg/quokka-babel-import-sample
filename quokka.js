@@ -1,10 +1,20 @@
 // The config also be placed into package.json or global quokka config,
 // see https://quokkajs.com/docs/configuration.html
 ({
-  babel: true
+  env: {
+    params: {
+      env: "BABEL_ENV=test"
+    }
+  },
+  babel: {
+    ignore: 'node_modules\/(?!lodash-es)'
+  }
 })
+
 
 import value from './myModule';
 import _xor from 'lodash-es/xor'
 
-console.log(value);
+
+console.log(_xor);
+
